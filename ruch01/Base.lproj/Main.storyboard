@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ui-xC-doS">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ruch01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZJn-7F-5dS">
+                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ojP-e3-2xa"/>
+                                    <outletCollection property="gestureRecognizers" destination="tHp-5F-3v7" appends="YES" id="bUE-DF-n4y"/>
+                                </connections>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Co0-py-D09">
+                                <rect key="frame" x="20" y="732" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-Aa-3Pp">
+                                <rect key="frame" x="20" y="812" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Search way">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchWay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X2Q-L4-lMd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLg-wI-0kb">
+                                <rect key="frame" x="353" y="735" width="25" height="25"/>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="myLocalFirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3u-av-AVe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueh-g7-97N">
+                                <rect key="frame" x="20" y="772" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaJ-Vu-OYd">
+                                <rect key="frame" x="353" y="775" width="25" height="25"/>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="myLocalSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyG-Dz-MOq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQ9-gS-JMr">
+                                <rect key="frame" x="354" y="682" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3t2-hy-ywc"/>
+                                    <constraint firstAttribute="width" constant="40" id="JkZ-Cj-sUb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="car"/>
+                                <connections>
+                                    <action selector="car:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMB-rQ-Pwm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL7-a8-L8I">
+                                <rect key="frame" x="354" y="632" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="L5A-6J-mTX"/>
+                                    <constraint firstAttribute="height" constant="40" id="iDs-pR-eXh"/>
+                                </constraints>
+                                <state key="normal" image="walking"/>
+                                <connections>
+                                    <action selector="walking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="19s-K5-x9N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWd-y6-DKh">
+                                <rect key="frame" x="354" y="582" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6HR-2B-wzr"/>
+                                    <constraint firstAttribute="height" constant="40" id="Rfv-Mk-tlg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="Bus"/>
+                                <connections>
+                                    <action selector="plane:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mW-0Q-gRv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hpu-Aa-3Pp" firstAttribute="top" secondItem="ueh-g7-97N" secondAttribute="bottom" constant="10" id="1Pl-x2-W7X"/>
+                            <constraint firstItem="Co0-py-D09" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="42U-S2-I0J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hpu-Aa-3Pp" secondAttribute="bottom" constant="20" id="4Ih-OQ-Bd9"/>
+                            <constraint firstItem="ZJn-7F-5dS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DKZ-Sb-Au2"/>
+                            <constraint firstItem="ueh-g7-97N" firstAttribute="top" secondItem="Co0-py-D09" secondAttribute="bottom" constant="10" id="GPz-7S-TUQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQ9-gS-JMr" secondAttribute="trailing" constant="20" id="Jej-h2-OCa"/>
+                            <constraint firstItem="rLg-wI-0kb" firstAttribute="leading" secondItem="Co0-py-D09" secondAttribute="trailing" constant="-41" id="PeZ-Ms-vIH"/>
+                            <constraint firstItem="hpu-Aa-3Pp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QxV-AW-2Id"/>
+                            <constraint firstItem="JaJ-Vu-OYd" firstAttribute="top" secondItem="ueh-g7-97N" secondAttribute="bottom" constant="-27" id="T4M-od-Pp0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Co0-py-D09" secondAttribute="trailing" constant="20" id="YJy-Y6-tBO"/>
+                            <constraint firstItem="ZJn-7F-5dS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="YUH-0b-a2s"/>
+                            <constraint firstItem="JaJ-Vu-OYd" firstAttribute="leading" secondItem="ueh-g7-97N" secondAttribute="trailing" constant="-41" id="bzA-zu-nS3"/>
+                            <constraint firstItem="ZJn-7F-5dS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c7a-aF-Zld"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RWd-y6-DKh" secondAttribute="trailing" constant="20" id="eds-wC-eHb"/>
+                            <constraint firstItem="bL7-a8-L8I" firstAttribute="top" secondItem="RWd-y6-DKh" secondAttribute="bottom" constant="10" id="epq-eD-Huy"/>
+                            <constraint firstItem="ZJn-7F-5dS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="h3H-uy-jQh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hpu-Aa-3Pp" secondAttribute="trailing" constant="20" id="hve-kl-rjx"/>
+                            <constraint firstItem="tQ9-gS-JMr" firstAttribute="top" secondItem="bL7-a8-L8I" secondAttribute="bottom" constant="10" id="igQ-dI-pTK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bL7-a8-L8I" secondAttribute="trailing" constant="20" id="jqx-nT-Yjs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ueh-g7-97N" secondAttribute="trailing" constant="20" id="pqY-WO-afq"/>
+                            <constraint firstItem="ueh-g7-97N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sQA-OF-RFz"/>
+                            <constraint firstItem="rLg-wI-0kb" firstAttribute="top" secondItem="Co0-py-D09" secondAttribute="bottom" constant="-27" id="tb7-6p-aSh"/>
+                            <constraint firstItem="Co0-py-D09" firstAttribute="top" secondItem="tQ9-gS-JMr" secondAttribute="bottom" constant="10" id="yww-65-ThX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a0n-Sf-c1l">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Location" id="wTj-1d-woL">
+                            <connections>
+                                <action selector="omClickGeo:" destination="BYZ-38-t0r" id="fM6-E3-aPT"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="M8I-if-eo6">
+                            <rect key="frame" x="101" y="7" width="212" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Satelite"/>
+                                <segment title="Hybrid"/>
+                            </segments>
+                            <connections>
+                                <action selector="onClickSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="D6M-qj-PcB"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="AXk-np-gpq">
+                            <connections>
+                                <action selector="searchButtom:" destination="BYZ-38-t0r" id="9wc-ag-SFD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Bus" destination="RWd-y6-DKh" id="wuf-Ym-YHr"/>
+                        <outlet property="Car" destination="tQ9-gS-JMr" id="H85-l5-bWi"/>
+                        <outlet property="MyLocalFirstItem" destination="rLg-wI-0kb" id="72J-9k-IaS"/>
+                        <outlet property="MyLocalSecondItem" destination="JaJ-Vu-OYd" id="wdc-Fb-Mht"/>
+                        <outlet property="Walking" destination="bL7-a8-L8I" id="OBJ-v1-VJV"/>
+                        <outlet property="firstLocation" destination="Co0-py-D09" id="tqf-jV-xSk"/>
+                        <outlet property="map" destination="ZJn-7F-5dS" id="csy-N1-NzO"/>
+                        <outlet property="secondLocation" destination="ueh-g7-97N" id="H7U-ur-xZ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tHp-5F-3v7">
+                    <connections>
+                        <action selector="didLongPress:" destination="BYZ-38-t0r" id="HbE-xo-28E"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XTH-Ee-yUy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7ui-xC-doS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDp-di-1Om">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WxQ-u3-hrd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGe-sj-BcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bus" width="64" height="64"/>
+        <image name="Location" width="25" height="25"/>
+        <image name="car" width="64" height="64"/>
+        <image name="walking" width="64" height="64"/>
+    </resources>
+</document>
