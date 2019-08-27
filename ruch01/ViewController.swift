@@ -222,7 +222,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBAction func didLongPress(_ sender: UILongPressGestureRecognizer) {
         guard sender.state == .began else { return }
         
-        
         let point = sender.location(in: map)
         let coordinate = map.convert(point, toCoordinateFrom: map)
         let geoCoder = CLGeocoder()
