@@ -1,6 +1,5 @@
 # Mini-map
 
-
 ## How to start:
 ```bash
 git clone https://github.com/Yserhii/Mini-map.git && cd Mini-map && open ruch01.xcodeproj
